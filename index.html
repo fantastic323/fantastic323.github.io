@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>悉尼亲子旅行规划 | 5月23日-6月1日</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIINfQpT8hjuH8dSt7S3OZ2c7LU8V7t2d8="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Baby friendly Sydney · 2026</p>
+          <h1>悉尼 10 天轻松亲子行程</h1>
+          <p class="hero-text">
+            5月23日到6月1日，以少换酒店、短交通、午睡优先、雨天可替换为原则，覆盖海港、动物园、博物馆、海滩和轻松餐厅。
+          </p>
+          <div class="hero-actions">
+            <a href="#planner" class="primary-action">查看每日行程</a>
+            <a href="#essentials" class="ghost-action">宝宝清单</a>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section id="planner" class="planner">
+          <div class="section-heading">
+            <p class="eyebrow">Daily plan</p>
+            <h2>每日行程</h2>
+          </div>
+          <div class="planner-layout">
+            <nav class="day-tabs" id="dayTabs" aria-label="选择日期"></nav>
+            <article class="day-detail" id="dayDetail" aria-live="polite"></article>
+          </div>
+        </section>
+
+        <section id="essentials" class="essentials">
+          <div class="section-heading">
+            <p class="eyebrow">Baby mode</p>
+            <h2>带宝宝的默认设置</h2>
+          </div>
+          <div class="essentials-grid">
+            <article>
+              <h3>住宿策略</h3>
+              <p>全程住一处，优先公寓式房型：厨房热辅食、洗衣处理口水巾和小衣物、客厅方便宝宝早睡。</p>
+            </article>
+            <article>
+              <h3>每日节奏</h3>
+              <p>9:30 出门，13:30 前结束主活动，15:00 后只安排低强度散步或酒店泳池。</p>
+            </article>
+            <article>
+              <h3>随身包</h3>
+              <p>雨罩、薄外套、毯子、辅食剪、密封袋、便携餐垫、退热贴、常用药、2 套换洗。</p>
+            </article>
+            <article>
+              <h3>天气备选</h3>
+              <p>下雨就把海滩/公园替换为 SEA LIFE、Maritime Museum、Australian Museum 或酒店泳池。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="references">
+          <div class="section-heading">
+            <p class="eyebrow">Checked sources</p>
+            <h2>规划依据</h2>
+          </div>
+          <div id="sources" class="source-list"></div>
+        </section>
+      </main>
+    </div>
+    <button class="map-fab" id="openMap" type="button">查看地图</button>
+
+    <section class="map-overlay" id="mapOverlay" aria-hidden="true">
+      <div class="map-panel" role="dialog" aria-modal="true" aria-labelledby="mapTitle">
+        <header class="map-header">
+          <div>
+            <p class="eyebrow">Trip map</p>
+            <h2 id="mapTitle">悉尼行程地图</h2>
+          </div>
+          <button class="map-close" id="closeMap" type="button" aria-label="关闭地图">×</button>
+        </header>
+        <div class="map-controls" id="mapControls" aria-label="筛选地图日期"></div>
+        <div class="map-content">
+          <div id="tripMap" class="trip-map" aria-label="悉尼旅行地点地图"></div>
+          <aside class="map-list" id="mapList" aria-label="地图地点顺序"></aside>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
